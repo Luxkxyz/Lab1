@@ -1,3 +1,5 @@
+using System.Drawing.Text;
+
 namespace Lab1
 {
     public partial class Form1 : Form
@@ -90,46 +92,66 @@ namespace Lab1
             textBoxinput.Text = userinput + "9";
         }
 
-       
+        string number1 = string.Empty;
+        string number2 = string.Empty;
+        string operation = string.Empty;
+        
         private void Plus(object sender, EventArgs e)
         {
-            string number1 = textBoxinput.Text;
+            number1 = textBoxinput.Text;
             textBoxinput.Text = string.Empty;
-            string operation = "+";
+            operation = "+";
         }
 
         private void Minus(object sender, EventArgs e)
         {
-            string number1 = textBoxinput.Text;
+            number1 = textBoxinput.Text;
             textBoxinput.Text = string.Empty;
-            string operation = "-";
+            operation = "-";
         }
-
+        
         private void equal(object sender, EventArgs e)
         {
-            string number1 = textBoxinput.Text;
             string number2 = textBoxinput.Text;
+            
             int num1 = int.Parse(number1);
             int num2 = int.Parse(number2);
-            if ()
+            float output = 0;
+            if (operation == "+")
             { 
-            int output = (num2 + num1);}
-            textBoxinput.Text = output . ToString();
+                output = num1 + num2;
             }
+            if (operation == "-")
+            {
+                output = num1 - num2;
+            }
+            if (operation == "x")
+            {
+
+                output = num1 * num2;
+            }
+            if (operation == "/")
+            {
+
+                output = num1 / num2;
+            }
+            output.ToString();
+
+            textBoxinput.Text = output.ToString();
         }
 
         private void Divide(object sender, EventArgs e)
         {
-            string number1 = textBoxinput.Text;
+             number1 = textBoxinput.Text;
             textBoxinput.Text = string.Empty;
-            string operation = "x";
+             operation = "/";
         }
 
         private void Multiply(object sender, EventArgs e)
         {
-            string number1 = textBoxinput.Text;
+             number1 = textBoxinput.Text;
             textBoxinput.Text = string.Empty;
-            string operation = "/";
+            operation = "x";
         }
     }
 }

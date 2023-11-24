@@ -52,7 +52,7 @@
             // textBoxinput
             // 
             textBoxinput.Font = new Font("Leelawadee UI", 20F);
-            textBoxinput.Location = new Point(12, 84);
+            textBoxinput.Location = new Point(109, 84);
             textBoxinput.Name = "textBoxinput";
             textBoxinput.Size = new Size(415, 43);
             textBoxinput.TabIndex = 0;
